@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITipoAnimalesServicio.cs" />
+    <Compile Include="TipoAnimalesServicio.cs" />
     <Compile Include="AnimalesServicio.cs" />
     <Compile Include="IAnimalesServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,25 +11,46 @@
     <title>Lista</title>
 </head>
 <body>
-    <div>
-        <table>
-            <tr>
-                <th>Nombre especie</th>
-                <th>Peso (KG)</th>
-                <th>Edad (años)</th>
-                <th>Tipo</th>
-            </tr>
-
-            @foreach (var animal in Model)
-            {
+    <form action="/Animales/ListaPorTipo" method="post">
+        <div>
+            Tipo: 
+            <select name="IdTipoAnimal">
+                <option value="0">Todos</option>
+                @foreach (DAL.TipoAnimal tipo in ViewBag.TodosTipoAnimal)
+                {
+                    if (tipo.IdTipoAnimal == ViewBag.IdTipoAnimalSeleccionado)
+                    {
+                        <option value="@tipo.IdTipoAnimal" selected="selected">@tipo.Nombre</option>
+                    }
+                    else
+                    {
+                        <option value="@tipo.IdTipoAnimal">@tipo.Nombre</option>
+                    }
+                }
+            </select>
+            <input type="submit" name="btnFiltrar" value="Filtrar" />
+        </div>
+        <div>
+            <table>
                 <tr>
-                    <td>@animal.NombreEspecie</td>
-                    <td>@animal.PesoPromedio</td>
-                    <td>@animal.EdadPromedio</td>
-                    <td>@animal.TipoAnimal.Nombre</td>
+                    <th>Nombre especie</th>
+                    <th>Peso (KG)</th>
+                    <th>Edad (años)</th>
+                    <th>Tipo</th>
                 </tr>
-            }
-        </table>
-    </div>
+
+                @foreach (var animal in Model)
+                {
+                    <tr>
+                        <td>@animal.NombreEspecie</td>
+                        <td>@animal.PesoPromedio</td>
+                        <td>@animal.EdadPromedio</td>
+                        <td>@animal.TipoAnimal.Nombre</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </form>
+
 </body>
 </html>

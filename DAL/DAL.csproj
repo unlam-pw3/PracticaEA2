@@ -53,8 +53,10 @@
     <Compile Include="Animal.cs">
       <DependentUpon>PracticaEA2.tt</DependentUpon>
     </Compile>
+    <Compile Include="ITipoAnimalesRepositorio.cs" />
+    <Compile Include="TipoAnimalesRepositorio.cs" />
     <Compile Include="AnimalesRepositorio.cs" />
-    <Compile Include="IRepositorio.cs" />
+    <Compile Include="IAnimalesRepositorio.cs" />
     <Compile Include="PracticaEA2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
