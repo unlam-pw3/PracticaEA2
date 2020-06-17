@@ -9,7 +9,7 @@ namespace Servicios
 {
     public class AnimalesServicio : IAnimalesServicio
     {
-        public IAnimalesRepositorio AnimalesRepositorio { get; set; }
+        protected IAnimalesRepositorio AnimalesRepositorio { get; set; }
 
         public AnimalesServicio(PracticaWebServicesEntities ctx)
         {

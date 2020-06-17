@@ -1,0 +1,35 @@
+﻿@model List<DAL.Animal>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Nombre especie</th>
+                <th>Peso (KG)</th>
+                <th>Edad (años)</th>
+                <th>Tipo</th>
+            </tr>
+
+            @foreach (var animal in Model)
+            {
+                <tr>
+                    <td>@animal.NombreEspecie</td>
+                    <td>@animal.PesoPromedio</td>
+                    <td>@animal.EdadPromedio</td>
+                    <td>@animal.TipoAnimal.Nombre</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
