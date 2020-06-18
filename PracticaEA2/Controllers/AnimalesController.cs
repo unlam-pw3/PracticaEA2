@@ -27,6 +27,14 @@ namespace PracticaEA2.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Alta(Animal animal)
+        {
+            AnimalesServicio.Alta(animal);
+
+            return RedirectToAction("Lista");
+        }
+
         public ActionResult Lista()
         {
             ViewBag.TodosTipoAnimal = TipoAnimalesServicio.ObtenerTodos();
