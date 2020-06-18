@@ -30,9 +30,17 @@ namespace PracticaEA2.Controllers
         [HttpPost]
         public ActionResult Alta(Animal animal)
         {
-            AnimalesServicio.Alta(animal);
-
-            return RedirectToAction("Lista");
+            if (ModelState.IsValid)
+            {
+                AnimalesServicio.Alta(animal);
+                return RedirectToAction("Lista");
+            }
+            else
+            {
+                ViewBag.IdTipoAnimalSeleccionado = animal.IdTipoAnimal;
+                ViewBag.TodosTipoAnimal = TipoAnimalesServicio.ObtenerTodos();
+                return View(animal);
+            }
         }
 
         public ActionResult Lista()

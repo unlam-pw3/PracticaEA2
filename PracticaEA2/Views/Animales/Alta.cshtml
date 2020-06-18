@@ -15,17 +15,21 @@
         <div>
             Nombre Especie:
             @Html.EditorFor(o => o.NombreEspecie)
+            @Html.ValidationMessageFor(o=> o.NombreEspecie)
         </div>
         <div>
             Peso Promedio:
             @Html.EditorFor(o => o.PesoPromedio)
+            @Html.ValidationMessageFor(o => o.PesoPromedio)
         </div>
         <div>
             Edad Promedio:
             @Html.EditorFor(o => o.EdadPromedio)
+            @Html.ValidationMessageFor(o => o.EdadPromedio)
         </div>
         <div>
             @Html.Partial("~/Views/Animales/pvComboTipoAnimales.cshtml")
+            @Html.ValidationMessageFor(o => o.IdTipoAnimal)
         </div>
         <div>
             <input type="submit" value="Guardar" />

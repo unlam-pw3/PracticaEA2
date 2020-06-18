@@ -54,6 +54,8 @@
       <DependentUpon>PracticaEA2.tt</DependentUpon>
     </Compile>
     <Compile Include="ITipoAnimalesRepositorio.cs" />
+    <Compile Include="Partials\Animal.cs" />
+    <Compile Include="Partials\AnimalMetadataType.cs" />
     <Compile Include="TipoAnimalesRepositorio.cs" />
     <Compile Include="AnimalesRepositorio.cs" />
     <Compile Include="IAnimalesRepositorio.cs" />
