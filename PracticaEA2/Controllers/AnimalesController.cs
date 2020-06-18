@@ -20,6 +20,13 @@ namespace PracticaEA2.Controllers
             TipoAnimalesServicio = new TipoAnimalesServicio(ctx);
         }
 
+        [HttpGet]
+        public ActionResult Alta()
+        {
+            ViewBag.TodosTipoAnimal = TipoAnimalesServicio.ObtenerTodos();
+            return View();
+        }
+
         public ActionResult Lista()
         {
             ViewBag.TodosTipoAnimal = TipoAnimalesServicio.ObtenerTodos();

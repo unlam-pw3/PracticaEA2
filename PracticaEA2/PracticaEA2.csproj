@@ -123,6 +123,8 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Animales\Lista.cshtml" />
+    <Content Include="Views\Animales\Alta.cshtml" />
+    <Content Include="Views\Animales\pvComboTipoAnimales.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

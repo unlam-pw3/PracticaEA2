@@ -1,0 +1,15 @@
+﻿Tipo:
+<select name="IdTipoAnimal">
+    <option value="0">Todos</option>
+    @foreach (DAL.TipoAnimal tipo in ViewBag.TodosTipoAnimal)
+    {
+        if (tipo.IdTipoAnimal == ViewBag.IdTipoAnimalSeleccionado)
+        {
+            <option value="@tipo.IdTipoAnimal" selected="selected">@tipo.Nombre</option>
+        }
+        else
+        {
+            <option value="@tipo.IdTipoAnimal">@tipo.Nombre</option>
+        }
+    }
+</select>

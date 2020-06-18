@@ -1,0 +1,37 @@
+﻿@model DAL.Animal
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta</title>
+</head>
+<body>
+    <form action="/Animales/Alta" method="post">
+        <div>
+            Nombre Especie:
+            @Html.EditorFor(o => o.NombreEspecie)
+        </div>
+        <div>
+            Peso Promedio:
+            @Html.EditorFor(o => o.PesoPromedio)
+        </div>
+        <div>
+            Edad Promedio:
+            @Html.EditorFor(o => o.EdadPromedio)
+        </div>
+        <div>
+            @Html.Partial("~/Views/Animales/pvComboTipoAnimales.cshtml")
+        </div>
+        <div>
+            <input type="submit" value="Guardar" />
+        </div>
+    </form>
+    <div> 
+    </div>
+</body>
+</html>
